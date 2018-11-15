@@ -32,7 +32,7 @@ A KV_object: <br/>
 
 
 
-/*------------------------------------------------ SELECTING SIZES -----------------------------------------------------*/
+/*------------------------------------------------ SELECTING SIZES -----------------------------------------------------*/<br/>
 	
 1) MAX_NUM_VALUES = 128	----- number of values per key ----- 256 was selected since that is the amount the tester uses<br/>
  *** NOTE: if MAX_NUM_VALUES is not a multiple of __TEST_MAX_POD_ENTRY__ (from comp310_a2_test.h) the FIFO test returns errors *** <br/>
@@ -61,7 +61,7 @@ A KV_object: <br/>
 8) TOTAL SIZE OF STORE =  MAX_NUM_PODS * SIZEOF(KV_pod) + SIZEOF(INT) = 128 * 656332 + 4 = 84010500 bytes = 80.1187 MB<br/>
   <br/>
 
-/*------------------------------------------------- HANDLING COLLISIONS: THE IDEA ----------------------------------------*/
+/*------------------------------------------------- HANDLING COLLISIONS: THE IDEA ----------------------------------------*/<br/>
 POD-LEVEL:<br/>
 	- If pod is full, replace the oldest KV_object that has been placed in that pod with a new one.<br/>
 	- This new KV_object placed in the pod will represent a fresh new KV_object such that the attributes are reset.<br/>
@@ -76,7 +76,7 @@ KEY-VALUE-LEVEL:<br/>
 	- I increment the index oldest_val_index so that the next value is now the oldest so that it will be the next to be replaced.<br/>
 <br/>
 
-/*--------------------------------------------------------- SYNCHRONIZATION ---------------------------------------------*/ 
+/*--------------------------------------------------------- SYNCHRONIZATION ---------------------------------------------*/ <br/>
 READ_COUNTER:<br/>
 	- Is an attribute of the store and when I mmap I get a pointer of a store in VM and use this pointer to initialize and change the store<br/>
 <br/>
@@ -84,7 +84,7 @@ LOCKING:<br/>
 	- I lock the entire store<br/>
 
 
-/*------------------------------------------------------- THE PROCEDURE: STEP BY STEP -----------------------------------*/
+/*------------------------------------------------------- THE PROCEDURE: STEP BY STEP -----------------------------------*/<br/>
 
 	a2_lib.c:<br/>
 	KV_store*  storage_addr; ------ this will be used as a pointer to the shared memory <br/>
