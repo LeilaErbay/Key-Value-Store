@@ -230,12 +230,12 @@ LOCKING:<br/>
 		16) close the semaphores 
 		17) return copy of the values
 	
+<br/>
 
-
-Functions not referenced:
-a2_helpers.c:
-	nullExit: prints out the function name, line number of where error occurred and perror and returns NULL
-	failExit: prints out the function name, line number of where error occurred and perror and returns FAILURE (-1)
+Functions not referenced:<br/>
+a2_helpers.c:<br/>
+&nbsp;&nbsp;&nbsp;	nullExit: prints out the function name, line number of where error occurred and perror and returns NULL<br/>
+&nbsp;&nbsp;&nbsp;	failExit: prints out the function name, line number of where error occurred and perror and returns FAILURE (-1)<br/>
 			
 	
 
